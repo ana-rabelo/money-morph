@@ -5,14 +5,16 @@ import br.com.moneyMorph.service.APIConsumption;
 import br.com.moneyMorph.service.DataConversion;
 
 import java.util.*;
+import io.github.cdimascio.dotenv.Dotenv;
 
 public class Main {
     public static void main(String[] args) {
         APIConsumption apiConsumption = new APIConsumption();
         DataConversion dataConversion = new DataConversion();
+        Dotenv dotenv = Dotenv.load();
 
         final String URL = "https://v6.exchangerate-api.com/v6/";
-        final String APIKEY = "21864e72103f17bdb2a27fbb";
+        final String APIKEY = dotenv.get("API_KEY");
 
         Map<Integer, String> currencyMap = new HashMap<>();
         currencyMap.put(1, "BRL-USD");
@@ -48,8 +50,6 @@ public class Main {
                                                                 amount,
                                                                 conversion.toCurrency(),
                                                                 conversion.amount());
-
-                    scanner.close();
                 }
             });
 

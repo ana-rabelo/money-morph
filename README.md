@@ -3,7 +3,7 @@
 
 ![GitHub Created At](https://img.shields.io/github/created-at/ana-rabelo/money-morph)
 ![GitHub License](https://img.shields.io/github/license/ana-rabelo/money-morph)
-![Static Badge](https://img.shields.io/badge/status-em_desenvolvimento-black)
+![Static Badge](https://img.shields.io/badge/status-finalizado-black)
 
 <i>Um conversor de moedas desenvolvido em Java que consome a [ExchangeRate-API](https://www.exchangerate-api.com/) para converter os valores e moedas inseridas pelo usuário por meio da interação com o console.</i>
 </h5>
